@@ -6,11 +6,22 @@ public class reverse_string
         Scanner scan = new Scanner(System.in);
         System.out.println("Enter first String :");
         String s = scan.nextLine();
+        String org = s;
         String reverse = "";
         for(int i=s.length()-1;i>=0;i--)
         {
             reverse = reverse + s.charAt(i);
         }
         System.out.println("Reverse String : "+reverse);
-    }
+
+        // palindrome
+        if(org.equals(reverse))
+        {
+            System.out.println("Palindrome String");
+        }
+        else
+        {
+            System.out.println("Not a Palindrome String");
+        }
+
 }

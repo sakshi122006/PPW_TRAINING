@@ -11,3 +11,10 @@ LEFT JOIN Transactions t
 ON v.visit_id = t.visit_id
 WHERE t.transaction_id IS NULL
 GROUP BY v.customer_id;
+
+-- self join 
+SELECT w1.id
+FROM Weather w1
+JOIN Weather w2
+ON DATEDIFF(w1.recordDate, w2.recordDate) = 1
+WHERE w1.temperature > w2.temperature;

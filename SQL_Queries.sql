@@ -40,3 +40,11 @@ SELECT e.name, b.bonus
 FROM Employee e LEFT JOIN Bonus b
 ON e.empId = b.empId
 WHERE b.bonus < 1000 OR b.bonus IS NULL;
+
+-- avg , round
+SELECT p.project_id,
+       ROUND(AVG(e.experience_years), 2) AS average_years
+FROM Project p
+JOIN Employee e
+ON p.employee_id = e.employee_id
+GROUP BY p.project_id;

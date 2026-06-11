@@ -21,3 +21,8 @@ SELECT DISTINCT author_id AS id
 FROM Views
 WHERE author_id = viewer_id
 ORDER BY id;
+
+-- length
+SELECT tweet_id
+FROM Tweets
+WHERE LENGTH(content) > 15;

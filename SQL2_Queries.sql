@@ -68,3 +68,12 @@ SELECT user_id,
 FROM Followers
 GROUP BY user_id
 ORDER BY user_id;
+
+-- having
+SELECT MAX(num) AS num
+FROM (
+    SELECT num
+    FROM MyNumbers
+    GROUP BY num
+    HAVING COUNT(num) = 1
+) AS single_numbers;

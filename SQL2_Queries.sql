@@ -98,3 +98,10 @@ SELECT activity_date AS day,
 FROM Activity
 WHERE activity_date BETWEEN '2019-06-28' AND '2019-07-27'
 GROUP BY activity_date;
+
+-- order by
+SELECT id, movie, description, rating
+FROM Cinema
+WHERE id % 2 != 0
+  AND description != 'boring'
+ORDER BY rating DESC;

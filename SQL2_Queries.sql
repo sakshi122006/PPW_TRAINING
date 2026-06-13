@@ -55,3 +55,9 @@ SELECT user_id,
        ) AS name
 FROM Users
 ORDER BY user_id;
+
+-- count
+SELECT class
+FROM Courses
+GROUP BY class
+HAVING COUNT(student) >= 5;

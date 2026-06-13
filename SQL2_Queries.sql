@@ -115,3 +115,20 @@ SELECT DATE_FORMAT(trans_date, '%Y-%m') AS month,
        SUM(CASE WHEN state = 'approved' THEN amount ELSE 0 END) AS approved_total_amount
 FROM Transactions
 GROUP BY DATE_FORMAT(trans_date, '%Y-%m'), country;
+
+-- when
+SELECT ROUND(
+       AVG(
+           CASE
+               WHEN order_date = customer_pref_delivery_date
+               THEN 1
+               ELSE 0
+           END
+       ) * 100, 2
+       ) AS immediate_percentage
+FROM Delivery
+WHERE (customer_id, order_date) IN (
+    SELECT customer_id, MIN(order_date)
+    FROM Delivery
+    GROUP BY customer_id
+);

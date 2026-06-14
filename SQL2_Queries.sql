@@ -173,3 +173,11 @@ JOIN (
 ) f
 ON a.player_id = f.player_id
 AND a.event_date = DATE_ADD(f.first_login, INTERVAL 1 DAY);
+
+--having
+SELECT e.name
+FROM Employee e
+JOIN Employee emp
+ON e.id = emp.managerId
+GROUP BY e.id, e.name
+HAVING COUNT(emp.managerId) >= 5;

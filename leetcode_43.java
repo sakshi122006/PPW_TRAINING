@@ -1,0 +1,9 @@
+class Solution {
+    public String multiply(String num1, String num2) {
+        int a = Integer.parseInt(num1);
+        int b = Integer.parseInt(num2);
+        int c = a*b;
+        String str = String.valueOf(c);
+        return str;
+    }
+}

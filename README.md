@@ -3,7 +3,6 @@
 A concise, one-sentence description explaining exactly what your Java application does and what problem it solves.
 
 ## 📋 Table of Contents
-- [Project Overview]
 - [🧠 Core Concept: Object-Oriented Programming (OOP)](
 - [🛠️ Tech Stack & Requirements](#%EF%B8%8F-tech-stack--requirements)
 - [💾 Installation & Quick Start](#-installation--quick-start)

@@ -63,7 +63,7 @@ Follow these simple steps to clone, build, and run the Java project on your loca
 ### 1. Clone the repository
 ```bash
 git clone https://github.com
-cd YOUR_REPOSITORY_NAME
+cd PPW_TRAINING
 ```
 
 ### 2. Compile the source code

@@ -74,3 +74,9 @@ SELECT product_id
 FROM Products
 WHERE low_fats = 'Y'
   AND recyclable = 'Y';
+
+--min
+SELECT player_id,
+       MIN(event_date) AS first_login
+FROM Activity
+GROUP BY player_id;

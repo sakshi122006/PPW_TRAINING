@@ -198,3 +198,11 @@ GROUP BY a.machine_id;
 select firstName,lastName,city,state
 from Person left join Address
 on Person.personId = Address.personId;
+
+-- limit
+SELECT (
+    SELECT DISTINCT salary
+    FROM Employee
+    ORDER BY salary DESC
+    LIMIT 1 OFFSET 1
+) AS SecondHighestSalary;

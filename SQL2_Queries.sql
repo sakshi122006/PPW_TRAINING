@@ -226,3 +226,10 @@ SELECT
     DENSE_RANK() OVER (ORDER BY score DESC) AS `rank`
 FROM Scores
 ORDER BY score DESC;
+
+-- self join
+SELECT e.name AS Employee
+FROM Employee e
+JOIN Employee m
+ON e.managerId = m.id
+WHERE e.salary > m.salary;

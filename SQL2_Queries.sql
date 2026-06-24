@@ -193,3 +193,8 @@ JOIN Activity b
 WHERE a.activity_type = 'start'
   AND b.activity_type = 'end'
 GROUP BY a.machine_id;
+
+-- left join
+select firstName,lastName,city,state
+from Person left join Address
+on Person.personId = Address.personId;

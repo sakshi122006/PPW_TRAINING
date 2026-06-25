@@ -101,3 +101,11 @@ ON p.product_id = o.product_id
 WHERE o.order_date BETWEEN '2020-02-01' AND '2020-02-29'
 GROUP BY p.product_id, p.product_name
 HAVING SUM(o.unit) >= 100;
+
+
+-- left join
+SELECT c.name AS Customers
+FROM Customers c
+LEFT JOIN Orders o
+ON c.id = o.customerId
+WHERE o.customerId IS NULL;

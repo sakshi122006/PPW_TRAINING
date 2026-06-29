@@ -102,3 +102,27 @@ var addTwoPromises = async function(promise1, promise2) {
     const [value1, value2] = await Promise.all([promise1, promise2]);
     return value1 + value2;
 };
+
+/*2665*/
+/**
+ * @param {number} init
+ * @return {Object}
+ */
+var createCounter = function(init) {
+    let current = init;
+
+    return {
+        increment: function() {
+            return ++current;
+        },
+
+        decrement: function() {
+            return --current;
+        },
+
+        reset: function() {
+            current = init;
+            return current;
+        }
+    };
+};

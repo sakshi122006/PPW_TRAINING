@@ -1,3 +1,4 @@
+/*single number in array*/
 class Solution {
     public int singleNonDuplicate(int[] nums) {
         int count = 0;

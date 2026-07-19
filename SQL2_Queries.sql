@@ -250,3 +250,9 @@ JOIN Logs l3
     ON l2.id = l3.id - 1
 WHERE l1.num = l2.num
   AND l2.num = l3.num;
+
+-- group by
+SELECT actor_id, director_id
+FROM ActorDirector
+GROUP BY actor_id, director_id
+HAVING COUNT(*) >= 3;
